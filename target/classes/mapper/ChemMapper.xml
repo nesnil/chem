@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.ChemDao">
+
+    <resultMap type="Chem" id="chemResultMap" >
+        <id property="id" column="ID"/>
+        <result property="idx" column="IDX"/>
+        <result property="title" column="TITLE"/>
+        <result property="content" column="CONTENT"/>
+        <result property="oid" column="OID"/>
+        <result property="type" column="TYPE"/>
+        <result property="uri" column="URI"/>
+        <result property="issample" column="ISSAMPLE"/>
+        <result property="docno" column="DOCNO"/>
+        <result property="cd" column="CD"/>
+        <result property="subtype" column="SUBTYPE"/>
+        <result property="createdate" column="CREATEDATE"/>
+        <result property="updatedate" column="UPDATEDATE"/>
+        <result property="gyyjUpdate" column="GYYJ_UPDATE"/>
+        <result property="whxxUpdate" column="WHXX_UPDATE"/>
+        <result property="dlxxxUpdate" column="DLXXX_UPDATE"/>
+        <result property="jkylUpdate" column="JKYL_UPDATE"/>
+        <result property="aqxfUpdate" column="AQXF_UPDATE"/>
+        <result property="hjstUpdate" column="HJST_UPDATE"/>
+        <result property="fgbzUpdate" column="FGBZ_UPDATE"/>
+        <result property="qtxxUpdate" column="QTXX_UPDATE"/>
+        <result property="zywhcdfj" column="ZYWHCDFJ"/>
+        <result property="casno" column="CASNO"/>
+        <result property="dwwhzs" column="DWWHZS"/>
+    </resultMap>
+
+    <resultMap type="ChemQryRes" id="chemQryResResultMap" >
+        <id property="id" column="ID"/>
+        <result property="title" column="TITLE"/>
+        <result property="keyword" column="KEYWORD"/>
+        <result property="type" column="TYPE"/>
+        <result property="tablename" column="TABLENAME"/>
+        <result property="imagename" column="IMAGENAME"/>
+        <result property="htmlCode" column="HTML_CODE"/>
+    </resultMap>
+
+    <resultMap type="ChemCtnt" id="chemCtntResultMap" >
+        <id property="id" column="ID"/>
+        <result property="hjtid" column="HJTID"/>
+        <result property="title" column="TITLE"/>
+        <result property="keyword" column="KEYWORD"/>
+        <result property="content" column="CONTENT"/>
+        <result property="crSubtype" column="CR_SUBTYPE"/>
+        <result property="crType" column="CR_TYPE"/>
+        <result property="createdate" column="CREATEDATE"/>
+        <result property="updatedate" column="UPDATEDATE"/>
+        <result property="ctype" column="CTYPE"/>
+    </resultMap>
+
+    <resultMap type="ChemDtl" id="chemDtlResultMap" >
+        <id property="id" column="ID"/>
+        <result property="hjtid" column="HJTID"/>
+        <result property="gyJbZwmc" column="GY_JB_ZWMC"/>
+        <result property="gyJbZwbm" column="GY_JB_ZWBM"/>
+        <result property="gyJbYwmc" column="GY_JB_YWMC"/>
+        <result property="gyJbYwbm" column="GY_JB_YWBM"/>
+        <result property="gyJbCas" column="GY_JB_CAS"/>
+        <result property="gyJbRtecsh" column="GY_JB_RTECSH"/>
+        <result property="gyJbFzs" column="GY_JB_FZS"/>
+        <result property="gyJbElinkcsh" column="GY_JB_ELINKCSH"/>
+        <result property="gyJbFzl" column="GY_JB_FZL"/>
+        <result property="gyJbQtbsh" column="GY_JB_QTBSH"/>
+        <result property="gyJbBq" column="GY_JB_BQ"/>
+        <result property="gyJbFzjg" column="GY_JB_FZJG"/>
+        <result property="gyJbUnh" column="GY_JB_UNH"/>
+        <result property="gyJbHjtidh" column="GY_JB_HJTIDH"/>
+        <result property="gyWxWxfl" column="GY_WX_WXFL"/>
+        <result property="gyWxFsx" column="GY_WX_FSX"/>
+        <result property="gyWxRsx" column="GY_WX_RSX"/>
+        <result property="gyWxXxlscjl" column="GY_WX_XXLSCJL"/>
+        <result property="gyWxXxlbt" column="GY_WX_XXLBT"/>
+        <result property="gyWxXxlws" column="GY_WX_XXLWS"/>
+        <result property="gyWxDxlscjl" column="GY_WX_DXLSCJL"/>
+        <result property="gyWxDxlbt" column="GY_WX_DXLBT"/>
+        <result property="gyWxDxlws" column="GY_WX_DXLWS"/>
+        <result property="gyWxRjx" column="GY_WX_RJX"/>
+        <result property="gyWxFjcw" column="GY_WX_FJCW"/>
+        <result property="gyWxZax" column="GY_WX_ZAX"/>
+        <result property="gyWxWdxjfyx" column="GY_WX_WDXJFYX"/>
+        <result property="gyJjXlyjcl" column="GY_JJ_XLYJCL"/>
+        <result property="gyJjXcjj" column="GY_JJ_XCJJ"/>
+        <result property="gyJjJdj" column="GY_JJ_JDJ"/>
+        <result property="gyAqGzaq" column="GY_AQ_GZAQ"/>
+        <result property="gyAqXfcs" column="GY_AQ_XFCS"/>
+        <result property="gyAqBlkzhgrfh" column="GY_AQ_BLKZHGRFH"/>
+        <result property="createdate" column="CREATEDATE"/>
+        <result property="updatedate" column="UPDATEDATE"/>
+        <result property="idx" column="IDX"/>
+        <result property="title" column="TITLE"/>
+        <result property="content" column="CONTENT"/>
+        <result property="zywhcdfj" column="ZYWHCDFJ"/>
+        <result property="casno" column="CASNO"/>
+        <result property="dwwhzs" column="DWWHZS"/>
+        <result property="tsxbqgxtdxYcjc" column="TSXBQGXTDX_YCJC"/>
+        <result property="tsxbqgxtdxFfjc" column="TSXBQGXTDX_FFJC"/>
+        <result property="qt" column="QT"/>
+        <result property="whCsWgyxz" column="WH_CS_WGYXZ"/>
+        <result property="whCsMdbz" column="WH_CS_MDBZ"/>
+        <result property="whCsRdngd" column="WH_CS_RDNGD"/>
+        <result property="whCsFd" column="WH_CS_FD"/>
+        <result property="whCsZqmd" column="WH_CS_ZQMD"/>
+        <result property="whCsSd" column="WH_CS_SD"/>
+        <result property="whLhtx" column="WH_LHTX"/>
+        <result property="whRsx" column="WH_RSX"/>
+        <result property="whRjx" column="WH_RJX"/>
+        <result property="whFjcw" column="WH_FJCW"/>
+        <result property="whWdxjfyx" column="WH_WDXJFYX"/>
+        <result property="jcjh" column="JCJH"/>
+        <result property="bltj" column="BLTJ"/>
+        <result property="dddlx" column="DDDLX"/>
+        <result property="zdjl" column="ZDJL"/>
+        <result property="lcbx" column="LCBX"/>
+        <result property="xcjj" column="XCJJ"/>
+        <result property="zd" column="ZD"/>
+        <result property="zl" column="ZL"/>
+        <result property="jej" column="JEJ"/>
+        <result property="yh" column="YH"/>
+        <result property="xlyjcl" column="XLYJCL"/>
+        <result property="gzaq" column="GZAQ"/>
+        <result property="xfcs" column="XFCS"/>
+        <result property="blkzhgrfh" column="BLKZHGRFH"/>
+        <result property="czczycc" column="CZCZYCC"/>
+        <result property="fqcz" column="FQCZ"/>
+        <result property="ysxx" column="YSXX"/>
+        <result property="fg" column="FG"/>
+        <result property="zyjcxz" column="ZYJCXZ"/>
+        <result property="xgbz" column="XGBZ"/>
+        <result property="swxz" column="SWXZ"/>
+        <result property="fgqt" column="FGQT"/>
+    </resultMap>
+
+    <select id="qryByKeywords" resultMap="chemResultMap" parameterType="String">
+        SELECT *
+        FROM DBCR.T_CR_CHEMICALS_LIST
+        <where>
+            <if test="keywords!=null and keywords!=''">
+                and title like "%"#{keywords}"%"
+            </if>
+            <if test="type!=null and type!=''">
+                and type=#{type}
+            </if>
+        </where>
+    </select>
+
+    <select id="searchChem" resultMap="chemQryResResultMap" parameterType="String">
+        (select ID,concat(HTML_CODE_LABEL,' ',subtype_name,' ',title) as TITLE,KEYWORD,TABLENAME,IMAGENAME,TYPE,HTML_CODE
+        from DBCR.V_CHEM_LIST
+        <where>
+            disable=0
+            <if test="keywords!=null and keywords!=''">
+                <foreach item="item" index="index" collection="keywords.split(' ')" >
+                    and (KEYWORD like "%|"#{item}"|%")
+                </foreach>
+            </if>
+            <if test="type!=null and type!=''">
+                and HTML_CODE=#{type}
+            </if>
+        </where>
+        order by subtype_sort_num)
+        union
+        (select ID,concat(HTML_CODE_LABEL,' ',subtype_name,' ',title) as TITLE,KEYWORD,TABLENAME,IMAGENAME,TYPE,HTML_CODE
+        from DBCR.V_CHEM_LIST
+        <where>
+            disable=0
+            <if test="keywords!=null and keywords!=''">
+            <foreach item="item" index="index" collection="keywords.split(' ')" >
+                and (TITLE like "%"#{item}"%" or KEYWORD like "%"#{item}"%" or CONTENT like "%"#{item}"%")
+            </foreach>
+            </if>
+            <if test="type!=null and type!=''">
+                and HTML_CODE=#{type}
+            </if>
+        </where>
+        order by subtype_sort_num)
+    </select>
+
+    <select id="qryChemContent" resultMap="chemCtntResultMap" parameterType="String">
+        select * from DBCR.T_CR_CONTENT
+        where id=#{id}
+    </select>
+
+    <select id="qryChemDetail" resultMap="chemDtlResultMap" parameterType="String">
+        select
+             GY.ID, GY.HJTID, GY.GY_JB_ZWMC, GY.GY_JB_ZWBM, GY.GY_JB_YWMC, GY.GY_JB_YWBM, GY.GY_JB_CAS, GY.GY_JB_RTECSH, GY.GY_JB_FZS, GY.GY_JB_ELINKCSH, GY.GY_JB_FZL, GY.GY_JB_QTBSH, GY.GY_JB_BQ, GY.GY_JB_FZJG, GY.GY_JB_UNH, GY.GY_JB_HJTIDH, GY.GY_WX_WXFL, GY.GY_WX_FSX, GY.GY_WX_RSX, GY.GY_WX_XXLSCJL, GY.GY_WX_XXLBT, GY.GY_WX_XXLWS, GY.GY_WX_DXLSCJL, GY.GY_WX_DXLBT, GY.GY_WX_DXLWS, GY.GY_WX_RJX, GY.GY_WX_FJCW, GY.GY_WX_ZAX, GY.GY_WX_WDXJFYX, GY.GY_JJ_XLYJCL, GY.GY_JJ_XCJJ, GY.GY_JJ_JDJ, GY.GY_AQ_GZAQ, GY.GY_AQ_XFCS, GY.GY_AQ_BLKZHGRFH, GY.CREATEDATE, GY.UPDATEDATE
+            ,CL.IDX,CL.TITLE,CL.CONTENT,CL.ZYWHCDFJ,CL.CASNO,CL.DWWHZS
+            ,DL.TSXBQGXTDX_FFJC,DL.TSXBQGXTDX_YCJC,DL.QT
+            ,WH.WH_CS_WGYXZ,WH.WH_CS_MDBZ,WH.WH_CS_RDNGD,WH.WH_CS_FD,WH.WH_CS_ZQMD,WH.WH_CS_SD,WH.WH_LHTX,WH.WH_RSX,WH.WH_RJX,WH.WH_FJCW,WH.WH_WDXJFYX
+            ,JK.JCJH,JK.BLTJ,JK.DDDLX,JK.ZDJL,JK.LCBX,JK.XCJJ,JK.ZD,JK.ZL,JK.JEJ,JK.YH
+            ,AQ.XLYJCL,AQ.GZAQ,AQ.XFCS,AQ.BLKZHGRFH,AQ.CZCZYCC,AQ.FQCZ,AQ.YSXX
+            ,FG.FG,FG.ZYJCXZ,FG.XGBZ,FG.SWXZ,FG.QT FGQT
+        from DBCR.T_CR_HXPK_GYYJ GY,DBCR.T_CR_CHEMICALS_LIST CL,DBCR.T_CR_HXPK_DLXXX DL,DBCR.T_CR_HXPK_WHXX WH,DBCR.T_CR_HXPK_JKYL JK,DBCR.T_CR_HXPK_AQXF AQ,DBCR.T_CR_HXPK_FGBZ FG
+        where GY.ID=CL.ID and GY.ID=DL.ID and GY.ID=WH.ID and GY.ID=JK.ID and GY.ID=AQ.ID and GY.ID=FG.ID
+          and GY.id=#{id}
+    </select>
+</mapper>

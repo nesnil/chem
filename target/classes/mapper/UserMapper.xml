@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.UserDao">
+
+    <resultMap type="User" id="userResultMap" >
+        <id property="id" column="ID"/>
+        <result property="username" column="USERNAME"/>
+        <result property="password" column="PASSWORD"/>
+        <result property="status" column="STATUS"/>
+        <result property="cpName" column="CP_NAME"/>
+        <result property="cpPhone" column="CP_PHONE"/>
+        <result property="companyName" column="COMPANY_NAME"/>
+        <result property="companyAddr" column="COMPANY_ADDR"/>
+        <result property="userVer" column="USER_VER"/>
+        <result property="createdate" column="CREATEDATE"/>
+        <result property="onlineLimit" column="ONLINE_LIMIT"/>
+        <result property="allowMobile" column="ALLOW_MOBILE"/>
+    </resultMap>
+
+    <insert id="addUser" parameterType="User">
+        INSERT INTO DBCR.T_CR_USER(ID,USERNAME,PASSWORD,STATUS,CP_NAME,CP_PHONE,COMPANY_NAME,COMPANY_ADDR,USER_VER,CREATEDATE)
+        VALUE (#{id},#{username}, #{password}, #{status}, #{cpName}, #{cpPhone}, #{companyName}, #{companyAddr}, #{userVer}, #{createdate})
+    </insert>
+
+    <delete id="delUserById" parameterType="String">
+        DELETE FROM DBCR.T_CR_USER WHERE id=#{id}
+    </delete>
+
+    <update id="updUser" parameterType="User">
+        UPDATE DBCR.T_CR_USER
+        SET USERNAME = #{username},PASSWORD = #{password},STATUS = #{status},CP_NAME = #{cpName},CP_PHONE = #{cpPhone},COMPANY_NAME = #{companyName},COMPANY_ADDR = #{companyAddr},USER_VER = #{userVer}
+        WHERE  ID = #{id}
+    </update>
+
+    <select id="qryById" resultMap="userResultMap" parameterType="String">
+        SELECT ID,USERNAME,PASSWORD,STATUS,CP_NAME,CP_PHONE,COMPANY_NAME,COMPANY_ADDR,USER_VER,ONLINE_LIMIT,ALLOW_MOBILE
+        FROM DBCR.T_CR_USER
+        WHERE id=#{id}
+    </select>
+
+    <select id="qryAllUser" resultMap="userResultMap">
+        SELECT ID,USERNAME,PASSWORD,STATUS,CP_NAME,CP_PHONE,COMPANY_NAME,COMPANY_ADDR,USER_VER,ONLINE_LIMIT,ALLOW_MOBILE
+        FROM DBCR.T_CR_USER
+    </select>
+
+    <select id="qryByUsername" resultMap="userResultMap" parameterType="String">
+        SELECT ID,USERNAME,PASSWORD,STATUS,CP_NAME,CP_PHONE,COMPANY_NAME,COMPANY_ADDR,USER_VER,ONLINE_LIMIT,ALLOW_MOBILE
+        FROM DBCR.T_CR_USER
+        WHERE USERNAME=#{username}
+    </select>
+
+</mapper>

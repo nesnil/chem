@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.LogDao">
+
+    <resultMap type="Log" id="logResultMap" >
+        <id property="id" column="ID"/>
+        <result property="userId" column="USER_ID"/>
+        <result property="ipAddress" column="IP_ADDRESS"/>
+        <result property="clientInfo" column="CLIENT_INFO"/>
+        <result property="logDate" column="LOG_DATE"/>
+        <result property="status" column="STATUS"/>
+        <result property="username" column="USERNAME"/>
+        <result property="brower" column="BROWER"/>
+        <result property="os" column="OS"/>
+    </resultMap>
+
+    <insert id="addLog" parameterType="Log">
+        INSERT INTO DBCR.T_CR_LOG(ID,USER_ID,IP_ADDRESS,CLIENT_INFO,LOG_DATE,STATUS,USERNAME,BROWER,OS)
+        VALUE (#{id},#{userId}, #{ipAddress}, #{clientInfo}, sysdate(), #{status}, #{username}, #{brower}, #{os})
+    </insert>
+
+</mapper>

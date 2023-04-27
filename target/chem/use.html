@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,minimum-scale=1,maximum-scale=1">
+    <title>化学救援助理</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index-v1.css">
+    <script src="js/jquery.min.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<section class="users">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-xs-12 sn-login-info-use">
+                <span><img alt="" src="images/5.png">用户名1234</span>
+                <span>|</span>
+                <a href="" class="sn-login">设置</a>
+                <span>|</span>
+                <a href="" class="sn-register">退出</a>
+            </div>
+
+            <div class="clearfix"></div>
+
+        </div>
+    </div>
+
+</section>
+<section class="use-search">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-xs-12 ">
+                <form id="searchForm" method="post">
+                    <fieldset class="row">
+                            <div id="searchInContainer">
+                                <div class="col-sm-3 col-xs-4">
+                                <input type="radio" name="check" value="site" id="searchSite" checked />
+                                <label for="searchSite" id="siteNameLabel">全部</label>
+                                </div>
+                                <div class="col-sm-3 col-xs-4">
+                                    <input type="radio" name="check" value="医疗救援" id="ylqy"/>
+                                    <label for="ylqy">医疗救援</label>
+                                </div>
+                                 <div class="col-sm-3 col-xs-4">
+                                    <input type="radio" name="check" value="消防救援" id="xfqy"/>
+                                    <label for="xfqy">消防救援</label>
+                                 </div>
+                                <div class="col-sm-3 col-xs-4">
+                                    <input type="radio" name="check" value="⼯程救援"  id="gcjy"/>
+                                    <label for="gcjy"> ⼯程救援</label>
+                                </div>
+                               <div class="col-sm-3 col-xs-4">
+                                    <input type="radio" name="check" value="典型案例" id="case"/>
+                                    <label for="case"> 典型案例 </label>
+                               </div>
+                                <div class="col-sm-3 col-xs-4">
+                                    <input type="radio" name="check" value="化学品库"  id="hxpk"/>
+                                    <label for="hxpk">化学品库</label>
+                                </div>
+                               <div class="col-sm-3 col-xs-4">
+                                    <input type="radio" name="check" value="法律法规"  id="flfg"/>
+                                    <label for="flfg"> 法律法规</label>
+                               </div>
+                                <div class="col-sm-3 col-xs-3">
+                                    <input type="radio" name="check" value="其他"  id="other"/>
+                                    <label for="other">其他</label>
+                                 </div>
+                            </div>
+                          <div class="clearfix"></div>
+                            <div class="submit-search">
+                                <input id="s" type="text" placeholder="CAS号 或 关键词"/>
+                                <span  class="glyphicon glyphicon-search"></span><input type="submit" value="搜    索" id="submitButton" />
+                            </div>
+                        </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="personal">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <div class="personal-gr"><span>用户名</span><input type="text" readonly="readonly" class="personal-title" value="shwblhg0834"></div>
+                <div class="personal-gr"><span>单位名称</span><input type="text" readonly="readonly" class="personal-title" value="上海迈步乐化工有限公司"></div>
+                <div class="personal-gr"><span>联系⼈</span><input type="text" readonly="readonly" class="personal-title" value="李"></div>
+                <div class="personal-gr"><span>版本属性</span><input type="text" readonly="readonly" class="personal-title" value="试⽤版 / 年付版 / 永久版"></div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <div class="personal-gr personal-password"><span>密码</span><input type="password"  class="personal-title" value="shwblhg0834"><a>修    改</a></div>
+                <div class="personal-gr"><span>单位地址</span><input type="text" readonly="readonly" class="personal-title" value="上海⻘浦区重固镇北⻘公路6255号"></div>
+                <div class="personal-gr"><span>联系⼈电话</span><input type="text" readonly="readonly" class="personal-title" value="13918145843"></div>
+                <div class="personal-gr"><span>版本有效期</span><input type="text" readonly="readonly" class="personal-title" value="2021.8.9"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="money">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-xs-12 money-title">
+                <h3>账户付费记录</h3>
+            </div>
+        <div class="clearfix"></div>
+            <div class="col-lg-12 col-md-12 col-xs-12 money-content">
+        <table  border="1">
+            <tr class="bg-money">
+                <th>序号 </th>
+                <th>付费⽇期 </th>
+                <th>付费⽅式</th>
+                <th>付费账号</th>
+                <th>版本属性 </th>
+                <th>版本有效期</th>
+                <th> 经办⼈ </th>
+                <th>备注</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2020.8.9</td>
+                <td>⼯商银⾏转帐</td>
+                <td>6225 801 0 011 0 2573</td>
+                <td>年付版</td>
+                <td>2021.8.9</td>
+                <td>张三</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container footer" >
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-xs-12 col-sm-6 contact">
+                <h2>
+                    联系方式
+                </h2>
+                <p><span class="glyphicon glyphicon-map-marker"></span>上海市XX区XX路XX号XX楼</p>
+                <p><span class="glyphicon glyphicon-earphone"></span>12345678901</p>
+                <p><span class="glyphicon glyphicon-envelope"></span>XXXX@XX.com.cn</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6 contact-right">
+
+                <div class="ico-footer">
+                    <img alt="" src="images/QQ.svg" class="img-circle qq" >
+                    <img alt="" src="images/emial.svg" class="img-circle qq">
+                </div>
+                <p>Copyright 2020 XXXXXXXXXX         All Right Reserved</p>
+                <p><a href="http://beian.miit.gov.cn/" title="">沪ICP 备 0000000号</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

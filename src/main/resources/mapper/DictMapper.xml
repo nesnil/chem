@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.DictDao">
+
+    <resultMap type="Dict" id="dictResultMap" >
+        <id property="id" column="ID"/>
+        <result property="dicCode" column="DIC_CODE"/>
+        <result property="dicValue" column="DIC_VALUE"/>
+        <result property="disable" column="DISABLE"/>
+        <result property="sortNum" column="SORT_NUM"/>
+        <result property="isGb" column="IS_GB"/>
+        <result property="creator" column="CREATOR"/>
+        <result property="creationDate" column="CREATION_DATE"/>
+        <result property="modifier" column="MODIFIER"/>
+        <result property="modifiedDate" column="MODIFIED_DATE"/>
+        <result property="parCode" column="PAR_CODE"/>
+        <result property="dicCodeMapping" column="DIC_CODE_MAPPING"/>
+    </resultMap>
+
+    <resultMap type="DictLite" id="dictLiteResultMap" >
+        <result property="dicCode" column="DIC_CODE"/>
+        <result property="dicValue" column="DIC_VALUE"/>
+    </resultMap>
+
+    <select id="qryByType" resultMap="dictResultMap" parameterType="String">
+        select * from DBCR.T_SYS_DIC where type_code=#{type} and DISABLE='0' order by SORT_NUM
+    </select>
+
+    <select id="qryCrTypes" resultMap="dictLiteResultMap" parameterType="String">
+        select distinct html_code as DIC_CODE,html_code_label as DIC_VALUE
+        from DBCR.T_SYS_DIC
+        where html_code is not null and 1=#{value1}
+        order by html_code
+    </select>
+</mapper>
